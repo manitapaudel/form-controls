@@ -1,0 +1,17 @@
+@mixin active {
+  color: #ffffff;
+  background-color: #0faf51;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 18px;
+  padding: 28px 16px;
+  &:hover {
+    @include active;
+  }
+}
+.activeLink {
+  @include active;
+}
