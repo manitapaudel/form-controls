@@ -4,7 +4,6 @@ import Style from "./link-item.module.scss";
 
 const LinkItem = ({ href, children }) => {
   const location = useLocation();
-  console.log(location);
   return (
     <Link
       to={href}

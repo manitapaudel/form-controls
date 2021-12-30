@@ -7,6 +7,7 @@ const initialValues = {
   username: "",
   email: "",
   password: "",
+  preference: "",
 };
 const Index = () => {
   const [fieldData, setFieldData] = React.useState(initialValues);
@@ -58,6 +59,43 @@ const Index = () => {
             placeholder="Enter Password"
             required
           ></input>
+        </div>
+        <div>
+          <p>What do you prefer?</p>
+          <div className={Style.checkbox}>
+            <input
+              type="radio"
+              name="preference"
+              id="cats"
+              value="cats"
+              onChange={handleChange}
+            />
+            <label htmlFor="cats">Cats</label>
+          </div>
+          <div className={Style.checkbox}>
+            <input
+              type="radio"
+              name="preference"
+              id="dogs"
+              value="dogs"
+              onChange={handleChange}
+            />
+            <label htmlFor="dogs">Dogs</label>
+          </div>
+          <div className={Style.checkbox}>
+            <input
+              type="radio"
+              name="preference"
+              id="both"
+              value="both"
+              onChange={handleChange}
+            />
+            <label htmlFor="both">Both</label>
+          </div>
+        </div>
+        <div className={Style.checkbox}>
+          <input id="terms" type="checkbox" required />
+          <label htmlFor="terms">I agree with the terms and conditions.</label>
         </div>
         <Button type="submit">Submit</Button>
       </form>
